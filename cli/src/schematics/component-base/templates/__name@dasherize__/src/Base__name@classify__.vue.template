@@ -1,0 +1,32 @@
+<template>
+  <div class="base-<%= dasherize(name) %>">
+    Base<%= classify(name) %> Working!
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent, PropType, computed } from 'vue'
+import { <%= classify(name) %>Adapter } from './Base<%= classify(name) %>.adapter'
+import { <%= underscore(name).toLocaleUpperCase() %>_DEFAULT_CONFIG } from './Base<%= classify(name) %>.default'
+import { mergeEventsAndDasherizeKeys } from '@/core/utils/factory/view.factory'
+export default defineComponent({
+  name: 'Base<%= classify(name) %>',
+  props: {
+    config: {
+      type: Object as PropType<<%= classify(name) %>Adapter>
+    }
+  },
+  setup(props) {
+    const Config = computed(() => {
+      return { ...<%= underscore(name).toLocaleUpperCase() %>_DEFAULT_CONFIG, ...props.config }
+    })
+    return {
+      Config,
+      mergeEventsAndDasherizeKeys
+    }
+  }
+})
+</script>
+
+
+<style lang="scss"></style>

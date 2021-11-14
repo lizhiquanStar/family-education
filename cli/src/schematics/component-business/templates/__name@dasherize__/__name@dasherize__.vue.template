@@ -1,0 +1,16 @@
+<template>
+  <div class="bus-<%= dasherize(name) %>">
+    <%= classify(name) %> Working!
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { <%= classify(name) %>Config } from './<%= classify(name) %>.config'
+export default defineComponent({
+  name: 'Bus<%= classify(name) %>',
+  setup() {
+    <%= classify(name) %>Config()
+  }
+})
+</script>

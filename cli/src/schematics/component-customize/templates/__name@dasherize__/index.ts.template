@@ -1,0 +1,3 @@
+import Cus<%= classify(name) %> from './src/Cus<%= classify(name) %>.vue'
+
+export default Cus<%= classify(name) %>

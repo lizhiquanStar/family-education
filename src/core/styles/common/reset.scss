@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: #f5f5f5;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale; // 抗锯齿
+  -webkit-font-smoothing: antialiased; // 抗锯齿
+  text-rendering: optimizeLegibility; // 文本渲染属性 - 侧重文本的可读性（清晰度）
+  font-family: Avenir, 'PingFang SC', Helvetica Neue, Helvetica,
+    'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+}
+
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+em,
+pre,
+figcaption,
+figure,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td,
+i,
+canvas img {
+  box-sizing: border-box;
+  font-style: normal;
+}
+canvas {
+  border: none;
+  outline: none;
+}
+ul {
+  list-style: none;
+}
+
+li {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+fieldset {
+  border: none;
+}
+
+section {
+  padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+.keep-all {
+  word-break: keep-all;
+}
+// flex
+.pps-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.flex {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.flex1 {
+  flex: 1
+}
+.flex-shrink {
+  flex-shrink: 0;
+}
+.flexb1 {
+  flex-basis: 100%;
+}
+.flexb2 {
+  flex-basis: 50%;
+}
+.flexb3 {
+  flex-basis: 33.33%;
+}
+.flexb4 {
+  flex-basis: 25%;
+}
+.flex-wrap {
+  flex-wrap: wrap
+}
+.flex-nowrap {
+  flex-wrap: nowrap
+}
+.flex-end {
+  justify-content: flex-end;
+}
+.flex-start {
+  justify-content: flex-start;
+}
+
+.no-cursor {
+  cursor: default;
+}
+.cursor {
+  cursor: pointer;
+}
+
+
+// text-align
+.tc {
+  text-align: center;
+}
+.tr {
+  text-align: right;
+}
+.tl {
+  text-align: left
+}
+
+
+
+// ::-webkit-scrollbar {
+//   z-index: 11;
+//   width: 4px;
+
+//   &:horizontal {
+//     height: 4px;
+//   }
+
+//   &-thumb {
+//     border-radius: 3px;
+//     width: 4px;
+//     background: var(--scrollbar-thumb-background);
+//   }
+
+//   &-corner {
+//     background: var(--scrollbar-track-background);
+//   }
+
+//   &-track {
+//     background: var(--scrollbar-track-background);
+
+//     &-piece {
+//       background: var(--scrollbar-track-background);
+//       width: 4px;
+//     }
+//   }
+// }

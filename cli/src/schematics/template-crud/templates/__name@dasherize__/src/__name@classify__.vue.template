@@ -1,0 +1,38 @@
+<template>
+  <container-template
+    class="<%= dasherize(name) %>"
+    title=""
+    :btnList="btnList"
+    @headerBtnClick="onHeaderBtnClick"
+  >
+    <el-card shadow="never">
+      <filter-template
+        v-model="filterForm"
+        :filterList="filterList"
+        @search="onSearch"
+      />
+      <pps-grid :gridConfig="gridConfig"></pps-grid>
+    </el-card>
+  </container-template>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { Pps<%= classify(name) %>Config } from './<%= classify(name) %>.config'
+export default defineComponent({
+  components: {},
+  setup() {
+    return {
+      ...Pps<%= classify(name) %>Config()
+    }
+  }
+})
+</script>
+
+<style lang="scss" scoped>
+.el-icon-edit {
+  color: $_color-primary;
+  cursor: pointer;
+  margin-left: 5px;
+}
+</style>

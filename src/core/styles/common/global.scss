@@ -1,0 +1,254 @@
+// 特殊数字字体
+// @font-face {
+//   font-family: 'DinPro';
+//   src: url('../../../assets/font/DINPro.ttf');
+// }
+// font-size line-height font-weight
+.pps-font-sm {
+  font-size: var(--van-font-size-sm);
+  line-height: var(--van-line-height-sm);
+}
+.pps-font-normal {
+  font-size: var(--van-font-size-normal);
+}
+.pps-font-md {
+  font-size: var(--van-font-size-md);
+  line-height: var(--van-line-height-md);
+}
+.pps-font-lg {
+  font-size: var(--van-font-size-lg);
+  line-height: var(--van-line-height-lg);
+}
+.pps-font-xl {
+  font-size: var(--van-font-size-xl);
+  line-height: var(--van-line-height-xl);
+}
+.pps-font-xxl {
+  font-size: var(--van-font-size-xxl);
+  line-height: var(--van-line-height-xxl);
+}
+.pps-weight-light {
+  font-weight: var(--van-font-weight-light)
+}
+.pps-weight-normal {
+  font-weight: var(--van-font-weight-normal)
+}
+.pps-weight-bold {
+  font-weight: var(--van-font-weight-bold)
+}
+.pps-align-left {
+  text-align: left
+}
+.pps-align-center {
+  text-align: center
+}
+.pps-align-right {
+  text-align: right
+}
+
+// border
+.pps-border {
+  border: 1px solid var(--van-gray-3);
+  border-radius: 2px
+}
+
+/*
+* 统一大标题副标题，小标题，
+*/
+
+// 大标题副标题栏
+.pps-h2-title {
+  @extend .pps-font-xl;
+  padding: 19px 32px;
+  .small {
+    @extend .pps-font-md;
+    margin-top:4px;
+    color: #999
+  }
+}
+// 小标题
+.pps-small-title{
+  @extend .pps-font-md;
+  padding: 19px 32px;
+}
+
+// 主题字体
+.pps-main-font {
+  @extend .pps-font-lg;
+}
+// 副标题字体
+.pps-sub-font {
+  @extend .pps-font-sm;
+  color: var(--van-gray-9);
+}
+// 特殊数字字体
+.pps-number-font {
+  @extend .pps-font-xxl;
+  @extend .pps-weight-bold;
+  font-family: 'DinPro';
+  color: var(--van-gray-8)
+}
+// 链接字体
+.pps-link {
+  @extend .pps-font-md;
+  color: var(--van-text-link-color);
+  cursor: pointer;
+}
+
+.pps-form-title {
+  border-bottom: 1px solid var(--van-gray-3);
+  padding: 19px 32px;
+  small {
+    color: #999;
+    font-size: var(--van-font-size-md);
+    line-height: var(--van-line-height-md);
+  }
+}
+
+.pps-com-grid {
+  .cus-grid__table {
+    padding: 10px 32px 24px 32px;
+  }
+  .base-load-more {
+    padding-top: 0
+  }
+}
+
+// margin
+.mr20 {
+  margin-right: 20px
+}
+.mt24 {
+  margin-top: 24px
+}
+.mt16 {
+  margin-top: 16px;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.mr16 {
+  margin-right: 16px;
+}
+.mr5 {
+  margin-right: 5px;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.m16 {
+  margin: 16px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+.mb5 {
+  margin-bottom: 5px;
+}
+.b-radius {
+  border-radius: 2px;
+}
+
+// width
+.pps-width {
+  width: 100%
+}
+.pps-width-2 {
+  width: 50%
+}
+.pps-width-3 {
+  width: 33.33%
+}
+.pps-width-4 {
+  width: 25%
+}
+
+// color
+.pps-warning {
+  color: #FFAB00
+}
+.pps-danger {
+  color: var(--van-red);
+}
+.pps-success {
+  color: var(--van-green)
+}
+.pps-primary {
+  color: var(--van-blue)
+}
+.pps-info {
+  color: var(--van-gray-9);
+}
+
+.pps-gray-9{
+  color: var(--van-gray-9);
+}
+
+.pps-gray-7 {
+  color: var(--van-gray-7);
+}
+.pps-bg-white {
+  background-color: white;
+}
+
+.pps-box-shadow {
+  box-shadow: 0 1px 3px rgba(100, 101, 102, 0.12);
+}
+
+.pps-line {
+  background: #bebebe;
+  height: 8px;
+  padding: 0 0.5px;
+  margin: 0 8px;
+  line-height: 0;
+  display: inline-block;
+}
+
+.pps-page {
+  min-height: 100%;
+  background: var(--van-gray-1)
+}
+
+
+//tag
+
+.pps-tag {
+  padding: 1px 3px;
+  border: 1px solid var(--van-gray-3);
+  border-radius: 2px;
+}
+// placeholder
+input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #e2e4ea;
+}
+input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #e2e4ea;
+}
+input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #e2e4ea;
+}
+input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #e2e4ea;
+}
+.pps-sub {
+  span {
+    padding-right: 10px;
+    position: relative;
+    &:not(:last-child)::after {
+      content: '';
+      height: 10px;
+      width: 0.5px;
+      position: absolute;
+      top: 3px;
+      right: 5px;
+      background: var(--van-gray-5);
+    }
+  }
+}

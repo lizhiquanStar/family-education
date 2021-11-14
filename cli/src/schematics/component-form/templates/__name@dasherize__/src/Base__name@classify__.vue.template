@@ -1,0 +1,12 @@
+<template>
+  <div class="base-<%= dasherize(name) %>">
+    base component
+  </div>
+</template>
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
+  name: 'Pps<%= classify(name) %>'
+})
+</script>
+

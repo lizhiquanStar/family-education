@@ -1,0 +1,18 @@
+<template>
+  <div class="<%= dasherize(name) %>">
+    Pps<%= classify(name) %> Working!
+  </div>
+</template>
+
+<script lang="ts">
+import { Pps<%= classify(name) %>Config } from './<%= classify(name) %>.config'
+export default {
+  components: {},
+  emits: [],
+  setup() {
+    return {
+      ...Pps<%= classify(name) %>Config()
+    }
+  }
+}
+</script>

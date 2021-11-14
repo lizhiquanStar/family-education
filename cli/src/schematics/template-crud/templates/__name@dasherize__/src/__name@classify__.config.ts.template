@@ -1,0 +1,78 @@
+import { reactive, nextTick } from 'vue'
+import { useRouter } from 'vue-router'
+import { CusGridAdapter } from '@/core/components/customize/grid/src/CusGrid.adapter'
+import { FlBreadcrumbAdapter } from '@/core/components/functional/breadcrumb/src/FlBreadcrumb.adapter'
+import { Pps<%= classify(name) %>Api } from './<%= classify(name) %>.api'
+import { emit, COMPONENT_METHOD } from '@/core/factory/core.factory'
+export function Pps<%= classify(name) %>Config() {
+  const router = useRouter()
+  const breadcrumbConfig = reactive<FlBreadcrumbAdapter>({
+    items: [
+      {
+        label: '我是面包屑'
+      }
+    ]
+  })
+  const btnList = reactive<Array<HeaderBtnItem>>([
+    {
+      text: '新增订单',
+      emitKey: 'create',
+      type: 'primary'
+    }
+  ])
+  const gridConfig = reactive<CusGridAdapter>({
+    table: {
+      showNo: true,
+      data: {
+        api: Pps<%= classify(name) %>Api.list
+      },
+      columns: [
+        {
+          label: '产品名称',
+          prop: 'roleName'
+        },
+        {
+          label: '操作',
+          columnType: 'button',
+          buttonConfig: {
+            buttons: [
+              {
+                text: '编辑',
+                permissionName: 'person:edit',
+                plain: false,
+                type: 'text',
+                onHandleCli: ({ row }) => {
+                  // router.push({ name: 'ShareDetail', query: row.productId })
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  })
+  const filterList = reactive<Array<FilterItem>>([
+    {
+      key: 'productName',
+      itemType: 'input',
+      label: '产品名称'
+    }
+  ])
+  const filterForm = reactive({
+    productName: ''
+  })
+  const onSearch = () => {
+    emit(COMPONENT_METHOD.gridSetParams, filterForm)
+    nextTick(() => {
+      emit(COMPONENT_METHOD.gridUpdate)
+    })
+  }
+  return {
+    breadcrumbConfig,
+    filterForm,
+    filterList,
+    gridConfig,
+    btnList,
+    onSearch
+  }
+}

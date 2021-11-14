@@ -1,0 +1,78 @@
+@mixin layout-wrap($wrap: null) {
+  @if $wrap == null { $wrap : 'wrap' }
+  flex-wrap: $wrap;
+}
+@mixin layout-align($align: 'start', $justify: 'start') {
+  $isAlignValid: false;
+  $isJustifyValid: false;
+  @each $name in 'start', 'between', 'center', 'around', 'end', 'stretch' {
+    @if $name == $align { $isAlignValid: true }
+    @if $name == $justify { $isJustifyValid: true }
+  }
+  @if $isAlignValid == true and $isJustifyValid == true {
+    @if $align == 'start' { $align: 'flex-start' }
+    @if $justify == 'start' { $justify: 'flex-start' }
+    @if $align == 'end' { $align: 'flex-end' }
+    @if $justify == 'end' { $justify: 'flex-end' }
+    @if $align == 'between' { $align: 'space-between' }
+    @if $justify == 'between' { $justify: 'space-between' }
+    @if $align == 'around' { $align: 'space-around' }
+    @if $justify == 'around' { $justify: 'space-around' }
+    align-items: #{$align};
+    align-content: #{$align};
+    justify-content: #{$justify};
+  }
+}
+@mixin layout($direction: null, $wrap: null, $align: null, $justify: null) {
+  @if $wrap == null { $wrap : 'wrap' }
+  @if $direction == null { $direction : 'row' }
+  @if $align == null { $align : 'start' }
+  @if $justify == null { $justify : 'start' }
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: $direction;
+  @include layout-wrap($wrap);
+  @include layout-align($align, $justify);
+}
+
+@mixin box-shadow() {
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12),
+        0px 0px 1px 0px rgba(0, 0, 0, 0.12);
+}
+@mixin box-shadow-hover() {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
+  0px 0px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+@mixin scroll-bar {
+  $--scrollbar-thumb-background: #f5f5f5;
+  $--scrollbar-track-background: #fff;
+
+  &::-webkit-scrollbar {
+    z-index: 11;
+    width: 6px;
+
+    &:horizontal {
+      height: 6px;
+    }
+
+    &-thumb {
+      border-radius: 5px;
+      width: 6px;
+      background: $--scrollbar-thumb-background;
+    }
+
+    &-corner {
+      background: $--scrollbar-track-background;
+    }
+
+    &-track {
+      background: $--scrollbar-track-background;
+
+      &-piece {
+        background: $--scrollbar-track-background;
+        width: 6px;
+      }
+    }
+  }
+}

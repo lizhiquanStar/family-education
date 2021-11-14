@@ -1,0 +1,22 @@
+<template>
+  <div class="cus-<%= dasherize(name) %>">
+    cus component
+  </div>
+</template>
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
+  name: 'Cus<%= classify(name) %>',
+  props: {},
+  emits: [],
+  setup() {},
+  data() {},
+  computed: {},
+  watch: {},
+  created() {},
+  mounted() {},
+  unmounted() {},
+  methods: {}
+})
+</script>
+

@@ -1,0 +1,96 @@
+:root {
+  --scrollbar-thumb-background: rgba(190, 190, 190, 0.4);
+  --scrollbar-track-background: transparent;
+  /* // Color Palette */
+  --van-black: #000;
+  --van-white: #fff;
+  --van-gray-1: #F5F5F5;
+  --van-gray-2: #f2f3f5;
+  --van-gray-3: #E0E0E0;
+  --van-gray-4: #dcdee0;
+  --van-gray-5: #c8c9cc;
+  --van-gray-6: #969799;
+  --van-gray-7: #666;
+  --van-gray-8: #141414;
+  --van-gray-9: #999;
+  --van-red: #D92400;
+  --van-blue: #0065FF;
+  --van-orange: #FD9D00;
+  --van-orange-dark: #ed6a0c;
+  --van-orange-light: #fffbe8;
+  --van-green: #34A876;
+
+  /* // Gradient Colors */
+  --van-gradient-red: linear-gradient(to right, #ff6034, #ee0a24);
+  --van-gradient-orange: linear-gradient(to right, #ffd01e, #ff8917);
+
+  /* // Component Colors */
+  --van-primary-color: var(--van-blue);
+  --van-success-color: var(--van-green);
+  --van-danger-color: var(--van-red);
+  --van-warning-color: var(--van-orange);
+  --van-text-color: var(--van-gray-8);
+  --van-active-color: var(--van-gray-2);
+  --van-active-opacity: 0.7;
+  --van-disabled-opacity: 0.5;
+  --van-background-color: var(--van-gray-1);
+  --van-background-color-light: #fafafa;
+  --van-text-link-color: #0065FF;
+
+  /* // Padding */
+  --van-padding-base: 4px;
+  --van-padding-xs: 8px;
+  --van-padding-sm: 12px;
+  --van-padding-md: 16px;
+  --van-padding-lg: 24px;
+  --van-padding-xl: 32px;
+
+  /* // Font */
+  --van-font-size-xs: 10px;
+  --van-font-size-sm: 12px;
+  --van-font-size-normal: 14px;
+  --van-font-size-md: 16px;
+  --van-font-size-lg: 18px;
+  --van-font-size-xl: 20px;
+  --van-font-size-xxl: 24px;
+  --van-font-weight-bold: 500;
+  --van-font-weight-normal: 400;
+  --van-font-weight-light: 300;
+  --van-line-height-xs: 14px;
+  --van-line-height-sm: 18px;
+  --van-line-height-md: 20px;
+  --van-line-height-lg: 24px;
+  --van-line-height-xl: 26px;
+  --van-line-height-xxl: 30px;
+  --van-base-font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
+    Helvetica, Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB',
+    'Microsoft Yahei', sans-serif;
+  --van-price-integer-font-family: Avenir-Heavy, PingFang SC, Helvetica Neue,
+    Arial, sans-serif;
+
+  /* // Animation */
+  --van-animation-duration-base: 0.3s;
+  --van-animation-duration-fast: 0.2s;
+  --van-animation-timing-function-enter: ease-out;
+  --van-animation-timing-function-leave: ease-in;
+
+  /* // Border */
+  --van-border-color: var(--van-gray-3);
+  --van-border-width-base: 1px;
+  --van-border-radius-sm: 4px;
+  --van-border-radius-md: 4px;
+  --van-border-radius-lg: 8px;
+  --van-border-radius-max: 999px;
+
+  /* animation */
+  --animate-duration: 1s;
+  --animate-delay: 1s;
+  --animate-repeat: 1;
+
+  /*van-list*/
+  --van-list-text-font-size: 14px;
+
+  /*van-tab*/
+  --van-tabs-line-height: 56px;
+  --van-tab-font-size: 14px;
+}
